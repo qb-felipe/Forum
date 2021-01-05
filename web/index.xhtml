@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Tela de Login</title>
+        <h:outputStylesheet name="css/format.css"/>
+    </h:head>
+    <h:body>
+        <h:form class="conf_telas">
+            <center>
+                <p:fieldset legend="Login">
+                    <h:panelGrid columns="2">
+                        <h:outputText value="Usuário: "/>
+                        <p:inputText value="#{controle.cpUsuario}"/>
+                        <h:outputText value="Senha: "/>
+                        <p:inputText placeholder="********" value="#{controle.cpSenha}"/> 
+                    </h:panelGrid>
+                    <h:panelGrid>    
+                        <span>#{controle.status}</span>
+                        <p:commandButton value="Entrar" update="@form" action="#{controle.btEntrar(ae)}"/>
+                    </h:panelGrid>
+                </p:fieldset>
+            </center>
+        </h:form>
+    </h:body>
+</html>
+

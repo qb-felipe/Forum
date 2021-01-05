@@ -1,0 +1,14 @@
+body{
+    background-color:#ccccff;   
+}
+
+.conf_telas{
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    font-size: 80%;
+}
+
+.botoes{
+    font-size: 55%;
+}

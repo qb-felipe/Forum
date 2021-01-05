@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Forum</title>
+        <h:outputStylesheet name="css/format.css"/>
+    </h:head>
+    <h:body>
+        <h:form class="conf_telas">
+            <center>
+                    <h:panelGrid>
+                        <p:inputTextarea placeholder="O que você está pensando agora?" value="#{controle.rascunho}"/>
+                        <p:commandLink update="@form" action="#{controle.btPublicar(ae)}">
+                            <h:outputText value="Publicar" class="botoes"/>
+                        </p:commandLink>
+                    </h:panelGrid>
+                    <h:panelGrid>
+                        <p:fieldset legend="Publicações">
+                            <p:inputTextarea value="#{controle.publicacao}"/>
+                            <h:panelGrid columns="2">
+                                <p:commandLink update="@form" action="#{controle.btAlterar(ae)}">
+                                    <h:outputText value="Alterar" class="botoes"/>
+                                </p:commandLink>
+                                <p:commandLink update="@form" action="#{controle.btExcluir(ae)}">
+                                    <h:outputText value="Excluir" class="botoes"/>
+                                </p:commandLink>
+                            </h:panelGrid>
+                        </p:fieldset>
+                    </h:panelGrid>
+            </center>
+        </h:form>
+    </h:body>
+</html>
+
